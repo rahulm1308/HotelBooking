@@ -1,0 +1,62 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="RoomBooking.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css" />
+    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="styles/matrix-style.css" />
+    <link rel="stylesheet" href="styles/matrix-media.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+          <h4 class="ml-3 mt-3">Admin Portal</h4>
+        </div>
+
+        <div id="user-nav" class="navbar navbar-inverse">
+          <ul class="nav">
+            <li class=""><asp:HyperLink ID="HyperLink1" runat="server"><span class="text">Welcome Admin</span></asp:HyperLink></li>
+            <li class=""><asp:HyperLink ID="LogoutLink" runat="server" NavigateUrl="~/Login.aspx"><span class="text">Logout</span></asp:HyperLink></li>
+          </ul>
+        </div>
+
+        <div id="sidebar">
+          <ul>
+            <li><asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Dashboard.aspx"><span>Dashboard</span></asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Rooms.aspx"><span>Rooms</span></asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/ViewBookings.aspx"><span>Bookings</span></asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink5" runat="server"><span>Pending Refunds</span></asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink6" runat="server"><span>Reviews</span></asp:HyperLink></li>
+            <li><asp:HyperLink ID="HyperLink7" runat="server"><span>Messages</span></asp:HyperLink></li>
+            
+          </ul>
+        </div>
+
+        <div id="content">
+
+            <asp:ContentPlaceHolder ID="head" runat="server">
+
+            </asp:ContentPlaceHolder>
+        
+        </div>
+
+        <div class="row-fluid" style="position:fixed; bottom:0; left:0">
+          <div id="footer" class="span12"> 2020 &copy; Fairmont Admin.</div>
+        </div>
+
+
+        <script src="js/jquery-3.2.1.min.js"></script>
+	    <script src="styles/bootstrap4/popper.js"></script>
+	    <script src="styles/bootstrap4/bootstrap.min.js"></script>
+        <script src="js/excanvas.min.js"></script> 
+        <script src="js/jquery-3.2.1.min.js"></script> 
+
+    </form>
+</body>
+</html>
